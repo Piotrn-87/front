@@ -24,6 +24,7 @@ burgerMenu.addEventListener("click", (e) => {
         activeElement[i].classList.toggle("mobile-nav__visible");
         activeElement[i].classList.toggle("backdrop-active");
     }
+    burgerMenu.classList.toggle("animated");
 })
 
 closeModal.addEventListener("click", (e) => {
@@ -32,10 +33,11 @@ closeModal.addEventListener("click", (e) => {
     for (let i = 0; i < activeElement.length; i++) {
         activeElement[i].classList.toggle("show_icon");
     }
+    burgerMenu.classList.toggle("animated");
 })
 
 // backdrop.addEventListener("click", (e) => {
 //     mobileNav.classList.remove("mobile-nav__visible");
 //     backdrop.classList.remove("backdrop-active");
-//     console.log("dziala");
+
 // })
