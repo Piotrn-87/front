@@ -347,11 +347,19 @@ body {
   right: 5%;
   font-size: 2rem;
   z-index: 2020;
-  color: #56E39F; }
+  color: #56E39F;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
   .burger .fas {
     display: none; }
   .burger .show_icon {
     display: block; }
+
+.animated {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
 
 .burger:hover {
   cursor: pointer; }
