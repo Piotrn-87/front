@@ -8,4 +8,4 @@
 
 To publish your page using github pages use `npm run deploy`
 
-live: https://piotrn-87.github.io/front/
+live: https://piotrn-87.github.io/frontend-tools__Resources/
