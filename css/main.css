@@ -341,14 +341,18 @@ template {
   display: none;
 }
 
-* {
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
   background: #636363;
@@ -422,7 +426,7 @@ body {
   z-index: 10;
 }
 
-.main-nav .main__nav--item {
+.main-nav .main-nav__item {
   display: none;
   list-style-type: none;
   -webkit-box-align: center;
@@ -434,7 +438,7 @@ body {
   height: 4rem;
 }
 
-.main-nav .main__nav--link {
+.main-nav .main-nav__link {
   display: block;
   color: #fff;
   text-decoration: none;
@@ -443,12 +447,12 @@ body {
   letter-spacing: .1rem;
 }
 
-.main-nav .main__nav--link:hover {
+.main-nav .main-nav__link:hover {
   color: #01BAEF;
 }
 
 @media (min-width: 40rem) {
-  .main-nav .main__nav--item {
+  .main-nav .main-nav__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -471,7 +475,7 @@ body {
   transition: transform .5s linear, -webkit-transform .5s linear;
 }
 
-.mobile-nav .mobile__nav--items {
+.mobile-nav .mobile-nav__items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,14 +495,14 @@ body {
   margin: 0 auto;
 }
 
-.mobile-nav .mobile__nav--item {
+.mobile-nav .mobile-nav__item {
   margin: 2rem 0;
 }
 
-.mobile-nav .mobile__nav--link {
+.mobile-nav .mobile-nav__link {
   margin: 1rem 0;
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: black;
   list-style-type: none;
   text-decoration: none;
@@ -564,7 +568,7 @@ body {
   }
 }
 
-.content .content_header {
+.content .content__header {
   font-size: 1.5rem;
   max-width: 1200px;
   width: 100%;
@@ -586,14 +590,14 @@ body {
   grid-row-gap: 1rem;
 }
 
-.sources .sources_item {
+.sources .sources__item {
   overflow: hidden;
   position: relative;
   background: #fff;
   border-radius: .5rem;
 }
 
-.sources .sources_item:before {
+.sources .sources__item:before {
   position: absolute;
   content: '</>';
   right: .5rem;
@@ -610,7 +614,7 @@ body {
 }
 
 @supports (-webkit-background-clip: text) {
-  .sources .sources_item:before {
+  .sources .sources__item:before {
     background: -webkit-gradient(linear, left top, right top, from(#56E39F), to(#01BAEF));
     background: linear-gradient(to right, #56E39F, #01BAEF);
     -webkit-background-clip: text;
@@ -621,7 +625,7 @@ body {
 }
 
 @media (min-width: 64rem) {
-  .sources .sources_item:hover:before {
+  .sources .sources__item:hover:before {
     bottom: -10%;
   }
 }
@@ -640,7 +644,7 @@ body {
   }
 }
 
-.source_link {
+.sources__link {
   display: block;
   padding: 1rem;
   text-decoration: none;
@@ -648,13 +652,13 @@ body {
   position: relative;
 }
 
-.source_link .source_title {
+.sources__link .sources__link--title {
   display: block;
   font-size: 1.2rem;
   margin-bottom: .8rem;
 }
 
-.source_link .source_description {
+.sources__link .source__description {
   font-size: .9rem;
   opacity: .8;
 }
@@ -663,7 +667,7 @@ body {
   display: block;
   padding: 1rem;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: #56E39F;
   background: #000;

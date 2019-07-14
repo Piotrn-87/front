@@ -3,7 +3,7 @@ const burgerMenu = document.querySelector(".burger");
 const mobileNav = document.querySelector(".mobile-nav");
 const activeElement = document.querySelectorAll(".active");
 const backdrop = document.querySelector(".backdrop");
-const closeModal = document.querySelector(".mobile__nav--items");
+const closeModal = document.querySelector(".mobile-nav__items");
 
 const text = "Frontend Resources !!"
 const time = 200;
@@ -41,3 +41,23 @@ closeModal.addEventListener("click", (e) => {
 //     backdrop.classList.remove("backdrop-active");
 
 // })
+
+const person = {
+    name: "Piotr",
+    age: "32"
+}
+
+console.log(person);
+
+const jasonPerson = JSON.stringify(person);
+console.log(jasonPerson);
+
+localStorage.setItem("person", jasonPerson);
+
+const personStringify = localStorage.getItem("person");
+
+const newPerson = JSON.parse(personStringify);
+
+console.log(newPerson);
+
+// localStorage.removeItem("person");
